@@ -6,7 +6,7 @@ Parameters:
     Type: String
   DBName:
     Type: String
-    Default: poja-prime-rds
+    Default: poja_prime-rds
   ProdDbClusterTimeout:
     Type: Number
 

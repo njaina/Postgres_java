@@ -25,8 +25,8 @@ Globals:
         AWS_SQS_QUEUE_URL: !Sub '{{resolve:ssm:/poja-prime/${Env}/sqs/mailbox-queue-url}}'
         AWS_EVENTBRIDGE_BUS: !Sub '{{resolve:ssm:/poja-prime/${Env}/eventbridge/bus-name}}'
         DATABASE_URL: !Sub '{{resolve:ssm:/poja-prime/${Env}/db/url}}'
-        DATABASE_USERNAME: !Sub '{{resolve:ssm:/poja-prime/${Env}/db/username}}'
-        DATABASE_PASSWORD: !Sub '{{resolve:ssm:/poja-prime/${Env}/db/password}}'
+        DATABASE_USERNAME: !Sub '{{resolve:ssm:/poja_prime/${Env}/db/username}}'
+        DATABASE_PASSWORD: !Sub '{{resolve:ssm:/poja_prime/${Env}/db/password}}'
         
 
 Parameters:
