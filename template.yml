@@ -15,10 +15,10 @@ Globals:
       ApplyOn: PublishedVersions
     VpcConfig:
       SecurityGroupIds:
-        - !Sub '{{resolve:ssm:/poja_prime/sg/sg-0a6dc9b9c85349eba}}'
+        - !Sub '{{resolve:ssm:/poja_prime/sg/sg-01748d8a9b2faee87}}'
       SubnetIds:
-        - !Sub '{{resolve:ssm:/poja_prime/subnet/private1/subnet-0aa320600857eadbe}}'
-        - !Sub '{{resolve:ssm:/poja_prime/subnet/private2/subnet-0990afcefbfba2e54}}'
+        - !Sub '{{resolve:ssm:/poja_prime/subnet/private1/subnet-0cce0ae80a1889beb}}'
+        - !Sub '{{resolve:ssm:/poja_prime/subnet/private2/subnet-030aaab637cea80e9}}'
     Environment:
       Variables:
         ENV: !Ref Env
