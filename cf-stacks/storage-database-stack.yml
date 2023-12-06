@@ -22,8 +22,8 @@ Resources:
       DBSubnetGroupDescription: !Join [ '', [ Subnet group for poja-prime , !Ref Env ] ]
       DBSubnetGroupName: !Join [ '', [ poja-prime-, !Ref Env, -subnet-group ] ]
       SubnetIds:
-        - !Sub '{{resolve:ssm:/poja/subnet/private1/subnet-0c4f4512bd7151fcb}}'
-        - !Sub '{{resolve:ssm:/poja/subnet/private2/subnet-0bced508169ada59a}}'
+        - !Sub '{{resolve:ssm:/poja_prime/subnet/private1/subnet-0d46180666660f24a}}'
+        - !Sub '{{resolve:ssm:/poja_prime/subnet/private2/subnet-0af280d57e1fc533c}}'
 
   DatabaseCluster:
     Type: AWS::RDS::DBCluster
