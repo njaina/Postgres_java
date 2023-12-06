@@ -6,7 +6,6 @@ import java.util.Set;
 import java.util.function.Consumer;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
-import lombok.extern.slf4j.Slf4j;
 import org.reflections.Reflections;
 import org.reflections.scanners.Scanners;
 import org.springframework.context.ApplicationContext;
@@ -15,7 +14,7 @@ import org.springframework.stereotype.Component;
 @PojaGenerated
 @AllArgsConstructor
 @Component
-@Slf4j
+
 public class EventServiceInvoker implements Consumer<EventConsumer.TypedEvent> {
 
   private final ApplicationContext applicationContext;
