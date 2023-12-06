@@ -20,7 +20,7 @@ Resources:
     Type: AWS::RDS::DBSubnetGroup
     Properties:
       DBSubnetGroupDescription: !Join [ '', [ Subnet group for poja-prime , !Ref Env ] ]
-      DBSubnetGroupName: !Join [ '', [ poja-prime-, !Ref Env, -subnet-group ] ]
+      DBSubnetGroupName: !Join [ '', [ poja_prime-, !Ref Env, -subnet-group ] ]
       SubnetIds:
         - !Sub '{{resolve:ssm:/poja_prime/subnet/private1/subnet-0cce0ae80a1889beb}}'
         - !Sub '{{resolve:ssm:/poja_prime/subnet/private2/subnet-030aaab637cea80e9}}'
@@ -35,8 +35,8 @@ Resources:
       Engine: aurora-postgresql
       EngineMode: serverless
       EngineVersion: 13.9 #Only postgresql version 13.9 and 11.9 supports Aurora serverless v1
-      MasterUsername: !Sub '{{resolve:ssm:/poja-prime/${Env}/db/username}}'
-      MasterUserPassword: !Sub '{{resolve:ssm:/poja-prime/${Env}/db/password}}'
+      MasterUsername: !Sub '{{resolve:ssm:/poja_prime/${Env}/db/username}}'
+      MasterUserPassword: !Sub '{{resolve:ssm:/poja_prime/${Env}/db/password}}'
       VpcSecurityGroupIds:
         - !Sub '{{resolve:ssm:/poja_prime/sg/sg-01748d8a9b2faee87}}'
       ScalingConfiguration:
@@ -66,7 +66,7 @@ Resources:
   DatabaseClusterIdentifierSSM:
     Type: AWS::SSM::Parameter
     Properties:
-      Name: !Join [ '', [ /poja-prime/, !Ref Env, /db/identifier ] ]
+      Name: !Join [ '', [ /poja_prime/, !Ref Env, /db/identifier ] ]
       Type: String
       Value: !GetAtt DatabaseCluster.Endpoint.Address
 
